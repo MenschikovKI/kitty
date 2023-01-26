@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .addBtn {
+      @apply fixed bottom-10 right-8 bg-blue-600 w-12 h-12 rounded-full drop-shadow-lg flex justify-center items-center text-white text-2xl hover:animate-bounce;
+    }
+  }
+
+.popup-wrapper {
+	position: fixed;
+	top:  0;
+	left:  0;
+	right:  0;
+	bottom:  0;
+	backdrop-filter: blur(1px);
+
+	justify-content: center;
+	align-items: center;
+	display:  none;
+}
+.popup-wrapper.active {
+	display: flex;
+}
+
+.popup {
+	width: 500px;
+	padding: 20px;
+	position: relative;
+	display: none;
+}
+.popup.active {
+	display: block;
+}
+.popup__close {
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor:  pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.popup__close:hover {
+
+}
+.popup__close::after {
+	content: "\26CC";
+}
+
+
